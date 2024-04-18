@@ -1,6 +1,6 @@
 # Instagram Minimal Extension
 
-The Instagram Minimal Extension is a Chrome extension designed to remove the `<main>` section of the Instagram website, allowing users to focus on posting without distractions from the feed. This extension uses JavaScript and a `MutationObserver` to dynamically remove specified elements.
+The Instagram Minimal Extension is a Chrome extension designed to remove the `<main>` section of the Instagram website, allowing users to focus on posting and messaging on Instagram without distractions from the feed. This extension uses JavaScript and a `MutationObserver` to dynamically remove specified elements.
 
 ## Installation
 
