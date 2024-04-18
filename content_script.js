@@ -6,7 +6,8 @@ function removeMainElements() {
         let isLink = false;
         let parent = element;
         while (parent) {
-            if (parent.getAttribute('role') === 'link') {
+            if (parent.getAttribute('role') === 'link') { 
+                // Allows creation of content
                 isLink = true;
                 break;
             }
@@ -22,7 +23,10 @@ function removeMainElements() {
 
 // Create an observer instance linked to the callback function
 const observer = new MutationObserver(mutations => {
-    removeMainElements(); // Check and remove elements every time mutations are observed
+    if (!window.location.pathname.startsWith('/direct/')) { 
+        // allows messaging
+        removeMainElements(); // Check and remove elements every time mutations are observed
+    }
 });
 
 // Start observing the document body for configured mutations
@@ -33,4 +37,6 @@ observer.observe(document.body, {
 });
 
 // Initial check to remove any elements already present
-removeMainElements();
+if (!window.location.pathname.startsWith('/direct/')) {
+    removeMainElements();
+}
