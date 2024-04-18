@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Instagram Minimal",
+  "version": "1.0",
+  "description": "Remove the main section from Instagram to focus only on posting.",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.instagram.com/*"],
+      "js": ["content_script.js"]
+    }
+  ],
+  "icons": {
+    "48": "icon.png"
+  }
+}
